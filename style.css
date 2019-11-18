@@ -1,0 +1,244 @@
+:root {
+    --fondo: #F5F7FB;
+    --fondo-menu: #4C56C0;
+    --resaltado: #84CC9B;
+    --fondo-proceso: #FFFFFF;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: var(--fondo)
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'agane';
+    font-weight: 200;
+    /* outline: 1px solid rebeccapurple; */
+}
+
+b {
+    font-weight: 600;
+}
+
+#main {
+    min-height: 100vh;
+    max-width: 100vw
+}
+
+#board,
+#menu {
+    display: inline-block
+}
+
+#menu {
+    width: 22em;
+    height: 100vh;
+    background: var(--fondo-menu);
+    padding: 50px 0px;
+    border-top-right-radius: 50px
+}
+
+#menu * {
+    color: var(--fondo-proceso)
+}
+
+#menu h1 {
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    padding: 0 20px 20px;
+    border-bottom: 2px solid var(--resaltado)
+}
+
+#menu .opciones {
+    margin: 0;
+    padding: 50px 0 0
+}
+
+#menu .opcion {
+    list-style: none;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all
+}
+
+#menu .opcion:hover {
+    background: var(--resaltado)
+}
+
+#menu .opcion i.con {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(./img/icon-check.svg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    vertical-align: middle;
+    margin-right: 10px
+}
+
+#menu .opcion:hover i.con {
+    background: url(./img/icon-check-v.svg)
+}
+
+#menu .opcion span {
+    display: inline-block;
+    width: calc(100% - 40px);
+    vertical-align: middle
+}
+
+#board {
+    vertical-align: top;
+    width: calc(100% - 23em);
+    height: 100vh;
+    padding: 50px 50px 20px
+}
+
+div[id^=bk-] {
+    background: var(--fondo-proceso)
+}
+
+#board h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+#bk-datos,
+#bk-formula,
+#bk-solucion {
+    border-radius: 20px;
+    margin: 0 2.3%;
+    padding: 5px 20px
+}
+
+#bk-datos,
+#bk-formula {
+    width: 45%;
+    height: 150px;
+    display: inline-block;
+    vertical-align: top
+}
+
+#bk-datos p span {
+    font-weight: 400;
+    width: 40px;
+    display: inline-block
+}
+
+#bk-datos input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--fondo-menu);
+    width: 200px
+}
+
+.btns {
+    text-align: center;
+}
+
+.enviar {
+    /* display: block; */
+    width: 200px;
+    background: var(--fondo-menu);
+    padding: 10px 20px;
+    margin: 30px 10px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: var(--fondo-proceso);
+    font-weight: 400;
+    cursor: pointer
+}
+
+#bk-solucion {
+    height: 280px
+}
+
+#propiedad {
+    color: var(--fondo-menu);
+    text-align: center;
+    font-size: 12px;
+    margin-top: 40px
+}
+
+#formula {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#paso1,
+#paso2 {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#paso1 p b::before {
+    content: " ";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(./img/arrow1.svg);
+    background-size: cover;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+
+#paso2 p b::before {
+    content: " ";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(./img/arrow2.svg);
+    background-size: cover;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+
+#paso2 span.dc {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#paso2 span.dc span {
+    display: block;
+}
+
+span.dc span:first-child {
+    border-bottom: 1px solid #000000;
+}
+
+#jp-none{
+    display: none !important;
+}
+#jp-none h1{
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    padding: 100px;
+}
+
+@media screen and (max-width:1160px){
+    #jp-none{
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+    }
+}
